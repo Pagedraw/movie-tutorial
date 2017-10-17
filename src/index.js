@@ -24,9 +24,13 @@ class App extends Component {
             reviews={this.state.reviews}
             rating={this.state.rating}
             commentBeingTyped={this.state.commentBeingTyped}
-            onChangeComment={(e) => this.setState({commentBeingTyped: e.target.value})}
+            onChangeComment={this.onChangeComment.bind(this)}
             addComment={this.addComment.bind(this)}
             setRating={this.setRating.bind(this)} />;
+    }
+
+    onChangeComment(e) {
+        this.setState({commentBeingTyped: e.target.value});
     }
 
     addComment() {
