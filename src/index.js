@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import AppRender from './pagedraw/artboard';
+import AppRender from './pagedraw/desktop_hd';
 import registerServiceWorker from './registerServiceWorker';
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
-            title: 'Pulp Fiction',
-            img_src: "https://ucarecdn.com/5e0a6047-d3e0-46f4-bbe6-c095fb64996a/",
+            title: 'Monty Python and the Holy Grail',
+            movie_year: '1975',
+            movie_description: "King Arthur and his knights embark on a low-budget search for the Grail, encountering many, very silly obstacles.",
+            director: 'Terry Gilliam, Terry Jones',
+            img_src: "https://nerdist.com/wp-content/uploads/2015/08/Holy-Grail-re-release-080415.jpg",
             rating: 0,
             reviews: [
                 {content: 'This is a test review'},
@@ -21,6 +24,9 @@ class App extends Component {
     render() {
         return <AppRender title={this.state.title} img_src={this.state.img_src}
             changeMovie={this.changeMovie.bind(this)}
+            director={this.state.director}
+            movie_year={this.state.movie_year}
+            movie_description={this.state.movie_description}
             reviews={this.state.reviews}
             rating={this.state.rating}
             commentBeingTyped={this.state.commentBeingTyped}
@@ -40,8 +46,11 @@ class App extends Component {
 
     changeMovie() {
         this.setState({
-            title: 'Back to the Future',
-            img_src: "https://ucarecdn.com/29b73fb5-8421-46bd-adf0-740793a622a7/"
+            title: 'Pulp Fiction',
+            movie_year: '1994',
+            movie_description: "The lives of two mob hit men, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+            director: 'Quentin Tarantino',
+            img_src: "https://ucarecdn.com/5e0a6047-d3e0-46f4-bbe6-c095fb64996a/",
         });
     }
 
