@@ -1,3 +1,4 @@
 {
-    "app": "movie-tutorial"
+    "app": "movie-tutorial",
+    "managed_folders": ["src/pagedraw/"]
 }
