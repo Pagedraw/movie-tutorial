@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import AppRender from './pagedraw/desktop_hd'
+import AppRender from './pagedraw/mainscreen';
 
 class App extends Component {
   constructor() {
